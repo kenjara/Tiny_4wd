@@ -108,8 +108,8 @@ try:
 
             mixer_results = mixer(x_axis, y_axis)
             #print (mixer_results)
-            power_left = int((mixer_results[0] / 125.0)*100)
-            power_right = int((mixer_results[1] / 125.0)*100)
+            power_left = int((mixer_results[0] / 125.0)*100) * -1
+            power_right = int((mixer_results[1] / 125.0)*100) * -1
             print("left: " + str(power_left) + " right: " + str(power_right))
 
             motor.one.speed((-power_right * maxPower))
